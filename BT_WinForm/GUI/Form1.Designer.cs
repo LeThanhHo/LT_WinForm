@@ -34,6 +34,7 @@
             button4 = new Button();
             button5 = new Button();
             button6 = new Button();
+            bt7 = new Button();
             SuspendLayout();
             // 
             // btn1
@@ -42,7 +43,7 @@
             btn1.Name = "btn1";
             btn1.Size = new Size(151, 56);
             btn1.TabIndex = 0;
-            btn1.Text = "button1";
+            btn1.Text = "Profile";
             btn1.UseVisualStyleBackColor = true;
             btn1.Click += btn1_Click;
             // 
@@ -52,8 +53,9 @@
             button2.Name = "button2";
             button2.Size = new Size(151, 56);
             button2.TabIndex = 1;
-            button2.Text = "button2";
+            button2.Text = "Year and Phone Number";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
@@ -61,8 +63,9 @@
             button3.Name = "button3";
             button3.Size = new Size(151, 56);
             button3.TabIndex = 2;
-            button3.Text = "button3";
+            button3.Text = "Caculator";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button4
             // 
@@ -70,8 +73,9 @@
             button4.Name = "button4";
             button4.Size = new Size(151, 56);
             button4.TabIndex = 3;
-            button4.Text = "button4";
+            button4.Text = "Caculator_2";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button5
             // 
@@ -79,8 +83,9 @@
             button5.Name = "button5";
             button5.Size = new Size(151, 56);
             button5.TabIndex = 4;
-            button5.Text = "button5";
+            button5.Text = "Simple Caculator";
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click_1;
             // 
             // button6
             // 
@@ -90,12 +95,24 @@
             button6.TabIndex = 5;
             button6.Text = "button6";
             button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click_1;
+            // 
+            // bt7
+            // 
+            bt7.Location = new Point(22, 357);
+            bt7.Name = "bt7";
+            bt7.Size = new Size(151, 65);
+            bt7.TabIndex = 6;
+            bt7.Text = "Khoa";
+            bt7.UseVisualStyleBackColor = true;
+            bt7.Click += bt7_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(bt7);
             Controls.Add(button6);
             Controls.Add(button5);
             Controls.Add(button4);
@@ -115,5 +132,6 @@
         private Button button4;
         private Button button5;
         private Button button6;
+        private Button bt7;
     }
 }
