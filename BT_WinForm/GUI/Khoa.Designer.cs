@@ -37,12 +37,12 @@
             // cb_Faculty
             // 
             cb_Faculty.FormattingEnabled = true;
-            cb_Faculty.Items.AddRange(new object[] { "Điện", "Công nghệ thông tin", "Cơ khí", "Điện", "Du lịch", "Ngoại ngữ" });
+            cb_Faculty.Items.AddRange(new object[] {});
             cb_Faculty.Location = new Point(90, 96);
             cb_Faculty.Name = "cb_Faculty";
             cb_Faculty.Size = new Size(602, 28);
             cb_Faculty.TabIndex = 0;
-            cb_Faculty.SelectedIndexChanged += cb_Faculty_SelectedIndexChanged;
+            cb_Faculty.SelectedValueChanged += cb_Faculty_SelectedValueChanged;
             // 
             // tbDisplay
             // 
@@ -82,6 +82,7 @@
             Controls.Add(cb_Faculty);
             Name = "Khoa";
             Text = "Khoa";
+            this.Load += new System.EventHandler(this.Khoa_Load);
             ResumeLayout(false);
             PerformLayout();
         }

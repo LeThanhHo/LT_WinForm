@@ -51,7 +51,8 @@ namespace BT_WinForm
 
         private void bt7_Click(object sender, EventArgs e)
         {
-
+            Form f = new Article14();
+            f.Show();
         }
     }
 

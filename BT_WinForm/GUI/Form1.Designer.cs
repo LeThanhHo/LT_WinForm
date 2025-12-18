@@ -93,7 +93,7 @@
             button6.Name = "button6";
             button6.Size = new Size(151, 56);
             button6.TabIndex = 5;
-            button6.Text = "button6";
+            button6.Text = "Khoa";
             button6.UseVisualStyleBackColor = true;
             button6.Click += button6_Click_1;
             // 
@@ -103,7 +103,7 @@
             bt7.Name = "bt7";
             bt7.Size = new Size(151, 65);
             bt7.TabIndex = 6;
-            bt7.Text = "Khoa";
+            bt7.Text = "Giảm giá";
             bt7.UseVisualStyleBackColor = true;
             bt7.Click += bt7_Click;
             // 
