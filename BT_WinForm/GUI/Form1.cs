@@ -61,6 +61,12 @@ namespace BT_WinForm
             f.Show();
 
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Form f = new Article24();
+            f.Show();
+        }
     }
 
 }
