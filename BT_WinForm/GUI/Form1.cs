@@ -49,10 +49,17 @@ namespace BT_WinForm
             f.Show();
         }
 
-        private void bt7_Click(object sender, EventArgs e)
+        private void button8_Click(object sender, EventArgs e)
         {
-            Form f = new Article14();
+            Form f = new QuanLy();
             f.Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Form f = new Article19();
+            f.Show();
+
         }
     }
 
