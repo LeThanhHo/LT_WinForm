@@ -1,4 +1,4 @@
-using BT_WinForm.GUI;
+﻿using BT_WinForm.GUI;
 
 namespace BT_WinForm
 {
@@ -65,6 +65,12 @@ namespace BT_WinForm
         private void button10_Click(object sender, EventArgs e)
         {
             Form f = new Article24();
+            f.Show();
+        }
+
+        private void btnGame_Click(object sender, EventArgs e)
+        {
+            Form f = new Game();
             f.Show();
         }
     }
