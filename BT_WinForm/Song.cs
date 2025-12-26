@@ -12,6 +12,8 @@ namespace BT_WinForm
         public string Name { get; set;}
         public int Age { get; set;}
         public bool Gender { get; set;}
+        public string PhoneNumber { get; set;}
+        public string Part {  get; set;}
         public virtual double Salary()
         {
             return 0;

@@ -24,20 +24,27 @@
             GIOITINH = new DataGridViewTextBoxColumn();
             LOAINV = new DataGridViewTextBoxColumn();
             LUONGNV = new DataGridViewTextBoxColumn();
+            SDT = new DataGridViewTextBoxColumn();
+            BOPHAN = new DataGridViewTextBoxColumn();
             lbma = new Label();
             lbten = new Label();
             lbtuoi = new Label();
+            lbphone = new Label();
+            lbbophan = new Label();
+            lbloai = new Label();
+            lbluong = new Label();
             tbma = new TextBox();
             tbten = new TextBox();
             tbtuoi = new TextBox();
-            ckbgioitinh = new CheckBox();
-            lbloai = new Label();
+            tbphone = new TextBox();
+            tbbophan = new TextBox();
             tbloai = new TextBox();
-            lbluong = new Label();
             tbluong = new TextBox();
-            bntthoat = new Button();
-            btnxoa = new Button();
+            ckbgioitinh = new CheckBox();
             btnthem = new Button();
+            btnxoa = new Button();
+            bntthoat = new Button();
+            bntLuu = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvEmloyee).BeginInit();
             SuspendLayout();
             // 
@@ -45,17 +52,17 @@
             // 
             dgvEmloyee.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvEmloyee.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvEmloyee.Columns.AddRange(new DataGridViewColumn[] { MANV, TENNV, TUOINV, GIOITINH, LOAINV, LUONGNV });
-            dgvEmloyee.Location = new Point(10, 10);
+            dgvEmloyee.Columns.AddRange(new DataGridViewColumn[] { MANV, TENNV, TUOINV, GIOITINH, LOAINV, LUONGNV, SDT, BOPHAN });
+            dgvEmloyee.Location = new Point(12, 12);
             dgvEmloyee.Name = "dgvEmloyee";
             dgvEmloyee.RowHeadersWidth = 51;
-            dgvEmloyee.Size = new Size(860, 230);
+            dgvEmloyee.Size = new Size(1000, 220);
             dgvEmloyee.TabIndex = 0;
             dgvEmloyee.CellClick += dgvEmloyee_CellClick;
             // 
             // MANV
             // 
-            MANV.HeaderText = "MÃ";
+            MANV.HeaderText = "MÃ NV";
             MANV.MinimumWidth = 6;
             MANV.Name = "MANV";
             // 
@@ -89,127 +96,174 @@
             LUONGNV.MinimumWidth = 6;
             LUONGNV.Name = "LUONGNV";
             // 
+            // SDT
+            // 
+            SDT.HeaderText = "SĐT";
+            SDT.MinimumWidth = 6;
+            SDT.Name = "SDT";
+            // 
+            // BOPHAN
+            // 
+            BOPHAN.HeaderText = "BỘ PHẬN";
+            BOPHAN.MinimumWidth = 6;
+            BOPHAN.Name = "BOPHAN";
+            // 
             // lbma
             // 
-            lbma.AutoSize = true;
-            lbma.Location = new Point(20, 260);
+            lbma.Location = new Point(30, 260);
             lbma.Name = "lbma";
-            lbma.Size = new Size(102, 20);
+            lbma.Size = new Size(100, 23);
             lbma.TabIndex = 1;
-            lbma.Text = "Mã Nhân Viên";
+            lbma.Text = "Mã Nhân Viên:";
             // 
             // lbten
             // 
-            lbten.AutoSize = true;
-            lbten.Location = new Point(20, 305);
+            lbten.Location = new Point(30, 300);
             lbten.Name = "lbten";
-            lbten.Size = new Size(104, 20);
+            lbten.Size = new Size(100, 23);
             lbten.TabIndex = 3;
-            lbten.Text = "Tên Nhân Viên";
+            lbten.Text = "Họ và Tên:";
             // 
             // lbtuoi
             // 
-            lbtuoi.AutoSize = true;
-            lbtuoi.Location = new Point(20, 350);
+            lbtuoi.Location = new Point(30, 340);
             lbtuoi.Name = "lbtuoi";
-            lbtuoi.Size = new Size(38, 20);
+            lbtuoi.Size = new Size(100, 23);
             lbtuoi.TabIndex = 5;
-            lbtuoi.Text = "Tuổi";
+            lbtuoi.Text = "Tuổi:";
+            // 
+            // lbphone
+            // 
+            lbphone.Location = new Point(380, 260);
+            lbphone.Name = "lbphone";
+            lbphone.Size = new Size(100, 23);
+            lbphone.TabIndex = 7;
+            lbphone.Text = "Số Điện Thoại:";
+            // 
+            // lbbophan
+            // 
+            lbbophan.Location = new Point(380, 300);
+            lbbophan.Name = "lbbophan";
+            lbbophan.Size = new Size(100, 23);
+            lbbophan.TabIndex = 9;
+            lbbophan.Text = "Bộ Phận:";
+            // 
+            // lbloai
+            // 
+            lbloai.Location = new Point(380, 340);
+            lbloai.Name = "lbloai";
+            lbloai.Size = new Size(100, 23);
+            lbloai.TabIndex = 11;
+            lbloai.Text = "Loại (ft/pt):";
+            // 
+            // lbluong
+            // 
+            lbluong.Location = new Point(380, 380);
+            lbluong.Name = "lbluong";
+            lbluong.Size = new Size(100, 23);
+            lbluong.TabIndex = 13;
+            lbluong.Text = "Công:";
             // 
             // tbma
             // 
             tbma.Location = new Point(140, 257);
             tbma.Name = "tbma";
-            tbma.Size = new Size(250, 27);
+            tbma.Size = new Size(180, 27);
             tbma.TabIndex = 2;
             // 
             // tbten
             // 
-            tbten.Location = new Point(140, 302);
+            tbten.Location = new Point(140, 297);
             tbten.Name = "tbten";
-            tbten.Size = new Size(300, 27);
+            tbten.Size = new Size(180, 27);
             tbten.TabIndex = 4;
             // 
             // tbtuoi
             // 
-            tbtuoi.Location = new Point(140, 347);
+            tbtuoi.Location = new Point(140, 337);
             tbtuoi.Name = "tbtuoi";
-            tbtuoi.Size = new Size(120, 27);
+            tbtuoi.Size = new Size(180, 27);
             tbtuoi.TabIndex = 6;
             // 
-            // ckbgioitinh
+            // tbphone
             // 
-            ckbgioitinh.AutoSize = true;
-            ckbgioitinh.Location = new Point(300, 348);
-            ckbgioitinh.Name = "ckbgioitinh";
-            ckbgioitinh.Size = new Size(63, 24);
-            ckbgioitinh.TabIndex = 7;
-            ckbgioitinh.Text = "Nam";
+            tbphone.Location = new Point(500, 257);
+            tbphone.Name = "tbphone";
+            tbphone.Size = new Size(180, 27);
+            tbphone.TabIndex = 8;
             // 
-            // lbloai
+            // tbbophan
             // 
-            lbloai.AutoSize = true;
-            lbloai.Location = new Point(20, 395);
-            lbloai.Name = "lbloai";
-            lbloai.Size = new Size(104, 20);
-            lbloai.TabIndex = 8;
-            lbloai.Text = "Loại nhân viên";
+            tbbophan.Location = new Point(500, 297);
+            tbbophan.Name = "tbbophan";
+            tbbophan.Size = new Size(180, 27);
+            tbbophan.TabIndex = 10;
             // 
             // tbloai
             // 
-            tbloai.Location = new Point(140, 392);
+            tbloai.Location = new Point(500, 337);
             tbloai.Name = "tbloai";
-            tbloai.Size = new Size(200, 27);
-            tbloai.TabIndex = 9;
-            // 
-            // lbluong
-            // 
-            lbluong.AutoSize = true;
-            lbluong.Location = new Point(20, 440);
-            lbluong.Name = "lbluong";
-            lbluong.Size = new Size(100, 20);
-            lbluong.TabIndex = 10;
-            lbluong.Text = "Lương / Công";
+            tbloai.Size = new Size(180, 27);
+            tbloai.TabIndex = 12;
             // 
             // tbluong
             // 
-            tbluong.Location = new Point(140, 437);
+            tbluong.Location = new Point(500, 377);
             tbluong.Name = "tbluong";
-            tbluong.Size = new Size(200, 27);
-            tbluong.TabIndex = 11;
+            tbluong.Size = new Size(180, 27);
+            tbluong.TabIndex = 14;
             // 
-            // bntthoat
+            // ckbgioitinh
             // 
-            bntthoat.Location = new Point(760, 390);
-            bntthoat.Name = "bntthoat";
-            bntthoat.Size = new Size(110, 40);
-            bntthoat.TabIndex = 14;
-            bntthoat.Text = "Thoát";
-            bntthoat.Click += bntthoat_Click;
-            // 
-            // btnxoa
-            // 
-            btnxoa.Location = new Point(630, 390);
-            btnxoa.Name = "btnxoa";
-            btnxoa.Size = new Size(110, 40);
-            btnxoa.TabIndex = 13;
-            btnxoa.Text = "Xóa";
-            btnxoa.Click += btnxoa_Click;
+            ckbgioitinh.Location = new Point(140, 380);
+            ckbgioitinh.Name = "ckbgioitinh";
+            ckbgioitinh.Size = new Size(104, 24);
+            ckbgioitinh.TabIndex = 15;
+            ckbgioitinh.Text = "GT Nam";
             // 
             // btnthem
             // 
-            btnthem.Location = new Point(500, 390);
+            btnthem.Location = new Point(780, 238);
             btnthem.Name = "btnthem";
-            btnthem.Size = new Size(110, 40);
-            btnthem.TabIndex = 12;
-            btnthem.Text = "Thêm";
+            btnthem.Size = new Size(120, 45);
+            btnthem.TabIndex = 16;
+            btnthem.Text = "Thêm Mới";
             btnthem.Click += btnthem_Click;
+            // 
+            // btnxoa
+            // 
+            btnxoa.Location = new Point(780, 340);
+            btnxoa.Name = "btnxoa";
+            btnxoa.Size = new Size(120, 45);
+            btnxoa.TabIndex = 17;
+            btnxoa.Text = "Xóa";
+            btnxoa.Click += btnxoa_Click;
+            // 
+            // bntthoat
+            // 
+            bntthoat.Location = new Point(780, 403);
+            bntthoat.Name = "bntthoat";
+            bntthoat.Size = new Size(120, 45);
+            bntthoat.TabIndex = 18;
+            bntthoat.Text = "Thoát";
+            bntthoat.Click += bntthoat_Click;
+            // 
+            // bntLuu
+            // 
+            bntLuu.Location = new Point(780, 289);
+            bntLuu.Name = "bntLuu";
+            bntLuu.Size = new Size(120, 43);
+            bntLuu.TabIndex = 19;
+            bntLuu.Text = "Cập Nhật";
+            bntLuu.UseVisualStyleBackColor = true;
+            bntLuu.Click += bntLuu_Click;
             // 
             // QuanLy
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(900, 500);
+            ClientSize = new Size(1024, 460);
+            Controls.Add(bntLuu);
             Controls.Add(dgvEmloyee);
             Controls.Add(lbma);
             Controls.Add(tbma);
@@ -217,16 +271,20 @@
             Controls.Add(tbten);
             Controls.Add(lbtuoi);
             Controls.Add(tbtuoi);
-            Controls.Add(ckbgioitinh);
+            Controls.Add(lbphone);
+            Controls.Add(tbphone);
+            Controls.Add(lbbophan);
+            Controls.Add(tbbophan);
             Controls.Add(lbloai);
             Controls.Add(tbloai);
             Controls.Add(lbluong);
             Controls.Add(tbluong);
+            Controls.Add(ckbgioitinh);
             Controls.Add(btnthem);
             Controls.Add(btnxoa);
             Controls.Add(bntthoat);
             Name = "QuanLy";
-            Text = "Quản Lý Nhân Viên";
+            Text = "Hệ Thống Quản Lý Nhân Viên";
             Load += QuanLy_Load;
             ((System.ComponentModel.ISupportInitialize)dgvEmloyee).EndInit();
             ResumeLayout(false);
@@ -236,16 +294,11 @@
         #endregion
 
         private DataGridView dgvEmloyee;
-        private Label lbma, lbten, lbtuoi, lbloai, lbluong;
-        private TextBox tbma, tbten, tbtuoi, tbloai, tbluong;
+        private Label lbma, lbten, lbtuoi, lbloai, lbluong, lbphone, lbbophan;
+        private TextBox tbma, tbten, tbtuoi, tbloai, tbluong, tbphone, tbbophan;
         private CheckBox ckbgioitinh;
         private Button bntthoat, btnxoa, btnthem;
-
-        private DataGridViewTextBoxColumn MANV;
-        private DataGridViewTextBoxColumn TENNV;
-        private DataGridViewTextBoxColumn TUOINV;
-        private DataGridViewTextBoxColumn GIOITINH;
-        private DataGridViewTextBoxColumn LOAINV;
-        private DataGridViewTextBoxColumn LUONGNV;
+        private DataGridViewTextBoxColumn MANV, TENNV, TUOINV, GIOITINH, LOAINV, LUONGNV, SDT, BOPHAN;
+        private Button bntLuu;
     }
 }
